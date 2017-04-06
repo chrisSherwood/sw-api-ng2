@@ -1,3 +1,15 @@
 <h1>
   {{title}}
 </h1>
+<div>
+<ul>
+<li *ngFor="let sw_characters of sw_characters">
+  Name: <span>{{sw_characters.characterName}}</span>
+  Allegiance  <span>{{sw_characters.allegiance}}</span>
+
+</li>
+
+</ul>
+{{sw_data}}
+</div>
+<add-character></add-character>
