@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SwApi
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
@@ -26,3 +27,8 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# sw-api-ng2
+
+A project to build basic site which queries a web service for data and allow new data to be pushed to it. This will generate an rest api.
+>>>>>>> 1089ddeadcee53a1b36c1744f29685c0ced4b682
