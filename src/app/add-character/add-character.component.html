@@ -1,9 +1,19 @@
+<div class="container">
 <h3>
   Add your favourite Star Wars Character to the API
 </h3>
 
-<form>
-<label for="character-name">Character Name: </label><input type="text" id="characterName" #characterName>
-<label for="allegiance"></label>Allegiance: <input text="text" id="allegiance" #allegiance>
-<button (click)="submitSwData(characterName.value, allegiance.value);">Send</button>
+
+<form class="form">
+<div class="form-group">
+<label for="character-name">Character Name: </label><input type="text" class="form-control" id="characterName" #characterName>
+</div>
+ <div class="form-group">
+<label for="allegiance"></label>Allegiance: <input text="text" class="form-control" id="allegiance" #allegiance>
+ </div>
+<label for="avatar-image"></label>Avatar: <input type="file" id="Avatar" #avatar>
+ <hr>
+<button (click)="submitSwData(characterName.value, allegiance.value);" class="btn btn-default">Send</button>
 </form>
+
+</div>

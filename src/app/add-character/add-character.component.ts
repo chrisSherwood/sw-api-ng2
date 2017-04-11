@@ -19,7 +19,9 @@ export class AddCharacterComponent implements OnInit {
 
  submitSwData(characterName :string, allegiance: string) {
      this.httpService.sendData({characterName: characterName, allegiance: allegiance})
-     .subscribe(data => console.log(data));
+     .subscribe(data => console.log(data),
+                err  => console.error(err),
+                ()   => alert('sucess!'));
 
 }
 }

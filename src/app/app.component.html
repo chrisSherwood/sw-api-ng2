@@ -1,15 +1,18 @@
-<h1>
-  {{title}}
-</h1>
-<div>
-<ul>
-<li *ngFor="let sw_characters of sw_characters">
-  Name: <span>{{sw_characters.characterName}}</span>
-  Allegiance  <span>{{sw_characters.allegiance}}</span>
 
-</li>
-
-</ul>
-{{sw_data}}
+<nav class="navbar navbar-default">
+<div class="container">
+   <div class="navbar-header">
+          <a class="navbar-brand" href="/">  {{title}}</a>
+  </div>
+ <div id="navbar" class="navbar-collapse collapse">
+   <ul class="nav navbar-nav">
+        <li><a routerLink="/welcome">Home</a></li>
+        <li><a routerLink="/add-character">Add Character to API</a></li>
+        <li><a routerLink="/view-api">View API</a></li>
+   </ul>
+</div><!--/.nav-collapse -->
 </div>
-<add-character></add-character>
+</nav>
+<div class="container">
+<router-outlet></router-outlet>
+</div>
