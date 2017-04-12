@@ -3,8 +3,10 @@
 </h1>
 <p>Latest Additions:</p>
   <div *ngFor="let sw_characters of sw_characters; let i=index">
-      <div *ngIf="i<4">
+      <div *ngIf="i<4" class="panel panel-default">
+        <div class="panel-body">
         {{sw_characters.characterName}}
+        </div>
        </div>
   </div>
 

@@ -22,8 +22,7 @@ export class AddCharacterComponent implements OnInit {
   }
 
 submitSwData(characterName :string, allegiance: string, avatar) {
-     this.base64Image = this.imageTobase64(avatar);
-     alert(this.base64Image);
+
      this.httpService.sendData({characterName: characterName, allegiance: allegiance})
      .subscribe(data => console.log(data),
                 err  => console.error(err),
@@ -31,11 +30,6 @@ submitSwData(characterName :string, allegiance: string, avatar) {
 
 }
 
-imageTobase64(file) {
-       this.fileReader.onload = (file) => {
-            this.base64Encoded = this.fileReader.result;
-            console.log("Encoded file!");
-        }
-}
+
 
 }
