@@ -1,3 +1,10 @@
-<p>
-  welcome works!
-</p>
+<h1>
+  Welcome to the create your start wars api site.
+</h1>
+<p>Latest Additions:</p>
+  <div *ngFor="let sw_characters of sw_characters; let i=index">
+      <div *ngIf="i<4">
+        {{sw_characters.characterName}}
+       </div>
+  </div>
+

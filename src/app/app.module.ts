@@ -4,20 +4,20 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule }   from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { HttpService } from './http.service';
-
+import { CoreModule} from './core.module';
 import { AppComponent } from './app.component';
 import { AddCharacterComponent } from './add-character/add-character.component';
-import { ImageToBase64Component } from './image-to-base64/image-to-base64.component';
 import { ViewCharacterApiComponent } from './view-character-api/view-character-api.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddCharacterComponent,
-    ImageToBase64Component,
     ViewCharacterApiComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +33,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
     {
       path: 'view-api',
       component: ViewCharacterApiComponent
+    },
+    {
+      path: 'account',
+      component: AccountComponent
     }
     ])
     
