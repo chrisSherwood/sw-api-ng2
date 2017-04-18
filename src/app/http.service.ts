@@ -19,9 +19,12 @@ export class HttpService {
   }
 
   sendData (data : any) {
+    console.log(data);
     const body = JSON.stringify(data);
     const header = new Headers();
-    header.append('Content-Type','application/json');   
+    header.append('Content-Type','application/json');    header.append('Content-Type', 'multipart/form-data');
+
+    
     return this.http.post(this.firebaseUri + 'data.json', body, header)
     .map((data: Response) => data.json());
   }

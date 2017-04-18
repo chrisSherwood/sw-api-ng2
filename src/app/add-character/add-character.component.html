@@ -1,7 +1,8 @@
 <div class="container">
-<h3>
-  Add your favourite Star Wars Character to the API
-</h3>
+<h1 class="display-4">
+  May the API be with you..
+</h1>
+
 
 
 <form class="form">
@@ -9,9 +10,24 @@
 <label for="character-name">Character Name: </label><input type="text" class="form-control" id="characterName" #characterName>
 </div>
  <div class="form-group">
-<label for="allegiance"></label>Allegiance: <input text="text" class="form-control" id="allegiance" #allegiance>
+<label for="allegiance"></label>Allegiance: 
+  <select name="allegiance" id="allegiance" #allegiance>
+    
+    <option *ngFor="let allegianceList of allegianceList" value="{{allegianceList}}">{{allegianceList}}</option>
+  </select>
  </div>
+ <div class="form-group">
+ <label for="character-information"></label>Character Information: <textarea rows="4" cols="50" class="form-control" id="character-information" #characterInformation></textarea>
+ </div>
+
+
 <hr>
-<button (click)="submitSwData(characterName.value, allegiance.value);" class="btn btn-default">Send</button>
+<button (click)="submitSwData(characterName.value, allegiance.value, characterInformation.value);" class="btn btn-default">Send</button>
+
+
+<button type="button" class="btn btn-primary btn-med" (click)="logout()">Logout</button>
+
+
 </form>
 </div>
+

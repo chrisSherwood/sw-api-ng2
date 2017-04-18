@@ -10,14 +10,29 @@ import { AddCharacterComponent } from './add-character/add-character.component';
 import { ViewCharacterApiComponent } from './view-character-api/view-character-api.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AccountComponent } from './account/account.component';
+import { 
+  AngularFireModule, 
+  AuthMethods, 
+  AuthProviders 
+} from "angularfire2";
+
+// TODO https://coursetro.com/posts/code/32/Create-a-Full-Angular-Authentication-System-with-Firebase
+//create login page
+
+export const firebaseConfig = {
+    apiKey: "AIzaSyCVIfDAkoPBMvre2kdwiUtjshB11NKJFmg",
+    authDomain: "ng2-swapi.firebaseapp.com",
+    databaseURL: "https://ng2-swapi.firebaseio.com",
+    storageBucket: "ng2-swapi.appspot.com"
+};
 
 @NgModule({
   declarations: [
     AppComponent,
     AddCharacterComponent,
-    ViewCharacterApiComponent,
     WelcomeComponent,
-    AccountComponent
+    AccountComponent,
+    ViewCharacterApiComponent
   ],
   imports: [
     BrowserModule,
@@ -31,14 +46,16 @@ import { AccountComponent } from './account/account.component';
      component: AddCharacterComponent 
     },
     {
-      path: 'view-api',
-      component: ViewCharacterApiComponent
-    },
-    {
       path: 'account',
       component: AccountComponent
+    },
+        {
+      path: 'view-api',
+      component: ViewCharacterApiComponent
     }
-    ])
+    ]),
+     AngularFireModule.initializeApp(firebaseConfig)
+
     
   ],
   providers: [HttpService],

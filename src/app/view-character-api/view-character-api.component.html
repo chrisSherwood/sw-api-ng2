@@ -1,14 +1,19 @@
-<h2>
-  View Character API
-</h2>
+<h1 class="display-4">
+  May the API be with you..
+</h1>
 
 <div>
 <table class="table">
 <thead>
-  <tr><td>Name</td><td>Allegiance</td></tr>
+  <tr><td>Avatar</td><td>Name</td><td>Allegiance</td><td>Character Information</td></tr>
 </thead>
 <tbody>
-  <tr *ngFor="let sw_characters of sw_characters"><td>{{sw_characters.characterName}}</td><td>{{sw_characters.allegiance}} </td></tr>
+  <tr *ngFor="let sw_characters of sw_characters">
+    <td><img width="50px" src="{{sw_characters.imageUri}}"/></td>
+    <td>{{sw_characters.characterName}}</td>
+    <td>{{sw_characters.allegiance}} </td>
+    <td>{{sw_characters.characterInformation}} </td>
+ </tr>
 </tbody>
 </table>
 </div>

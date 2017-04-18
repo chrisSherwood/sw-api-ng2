@@ -1,3 +1,11 @@
 <p>
- authentication account works!
-</p>
+Please authenticate to add a character to the API</p>
+
+<div class="form-container">
+  <img src="assets/images/lock.svg" id="lock">
+
+    <span class="error" *ngIf="error">{{ error }}</span>
+
+<button type="button" class="btn btn-primary btn-lg" (click)="loginGoogle()" id="google">Login</button>
+
+</div>

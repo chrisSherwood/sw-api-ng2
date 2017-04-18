@@ -1,12 +1,23 @@
-<h1>
-  Welcome to the create your start wars api site.
+<h1 class="display-4">
+  May the API be with you..
 </h1>
-<p>Latest Additions:</p>
-  <div *ngFor="let sw_characters of sw_characters; let i=index">
-      <div *ngIf="i<4" class="panel panel-default">
-        <div class="panel-body">
+<p>Sample Data</p>
+
+
+  <!-- Equal width cols, same on all screen sizes -->
+  <div class="col-12">
+  <div class="row" *ngFor="let sw_characters of sw_characters; let i=index">
+    <div class="col-12">
+      <div  *ngIf="i<1" class="card">
+      <h3 class="card-header">
+        <img class="card-img-top img-fluid" src="{{sw_characters.imageUri}}" alt="Card image cap">
         {{sw_characters.characterName}}
-        </div>
-       </div>
+      </h3>
+      <div class="card-block">
+      <p class="card-text">{{sw_characters.characterInformation}}.</p>
+    </div>
   </div>
+
+    </div>
+
 
