@@ -1,23 +1,43 @@
-<h1 class="display-4">
-  May the API be with you..
-</h1>
-<p>Sample Data</p>
 
-
+<div class="container">
   <!-- Equal width cols, same on all screen sizes -->
+      <!--<div *ngFor="let sw_characters of sw_characters; let i=index"  class="col-4">
+
+      </div>-->
+<div class="row">
   <div class="col-12">
-  <div class="row" *ngFor="let sw_characters of sw_characters; let i=index">
-    <div class="col-12">
-      <div  *ngIf="i<1" class="card">
-      <h3 class="card-header">
-        <img class="card-img-top img-fluid" src="{{sw_characters.imageUri}}" alt="Card image cap">
-        {{sw_characters.characterName}}
-      </h3>
-      <div class="card-block">
-      <p class="card-text">{{sw_characters.characterInformation}}.</p>
-    </div>
+   <div class="jumbotron">
+  <h1 class="display-3">May the API be with you...</h1>
+  <p class="lead">Bored developer seeks way to get interesting endpoint to consume while learning Angular 2.</p>
+  <hr class="my-2">
+  <p>This site allows you to update a Firebase endpoint in realtime allowing the JSON end point to be consumed.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" role="button" routerLink="/account">Add a character</a>
+  </p>
+</div>
   </div>
+</div>
+<div class="row">
+<div  *ngFor="let sw_characters of sw_characters; let i=index" class="col">
+ <template [ngIf]="i<4">    
+<div class="card">
+  <h3 class="card-header">{{sw_characters.allegiance}}</h3>
+  <div class="card-block">
+    <p class="text-center"><img class="card-img-top" src="{{sw_characters.imageUri}}" alt="Card image cap"></p>
+    <blockquote class="blockquote">
+  <p class="mb-0">{{sw_characters.characterInformation}}</p>
+  <footer class="blockquote-footer">{{sw_characters.characterName}}
+    <cite title="Source Title">as seen in Episode {{sw_characters.firstAppearance}}</cite>
+  </footer>
+</blockquote>
+  </div>
+</div>
+</template>
+   
+</div>
+</div>
+<div class="row">
 
-    </div>
-
-
+</div>
+</div>
+<hr>

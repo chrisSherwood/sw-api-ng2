@@ -1,14 +1,26 @@
 <div class="container">
-<h1 class="display-4">
-  May the API be with you..
-</h1>
-
-
-
+    <nav class="navbar navbar-light bg-faded">
+<span class="navbar-text">Logged in as: {{username}}</span> 
+ <span class="navbar-text">    <button type="button" class="btn btn-primary btn-med" (click)="logout()">Logout</button></span>
+</nav>
+    <hr>
+<div class="row">
+<div class="col-6">
+  <h3>Add a Character</h3>
 <form class="form">
 <div class="form-group">
 <label for="character-name">Character Name: </label><input type="text" class="form-control" id="characterName" #characterName>
 </div>
+<div class="form-group">
+<label for="character-quote">Character Quote: </label><input type="text" class="form-control" id="characterQuote" #characterQuote>
+</div>
+<div class="form-group">
+<label for="first-appearance"></label>First Appearance: 
+  <select name="first-appearance" id="first-appearance" #firstApperance>
+    
+    <option *ngFor="let appearanceList of appearanceList" value="{{appearanceList}}">{{appearanceList}}</option>
+  </select>
+ </div>
  <div class="form-group">
 <label for="allegiance"></label>Allegiance: 
   <select name="allegiance" id="allegiance" #allegiance>
@@ -19,15 +31,17 @@
  <div class="form-group">
  <label for="character-information"></label>Character Information: <textarea rows="4" cols="50" class="form-control" id="character-information" #characterInformation></textarea>
  </div>
+ 
 
 
 <hr>
-<button (click)="submitSwData(characterName.value, allegiance.value, characterInformation.value);" class="btn btn-default">Send</button>
-
-
-<button type="button" class="btn btn-primary btn-med" (click)="logout()">Logout</button>
-
-
+<button (click)="submitSwData(characterName.value, allegiance.value, characterInformation.value, characterQuote.value, firstApperance.value);" class="btn btn-default">Send</button>
 </form>
+</div>
+<div class="col-6">
+    <h3>Preview</h3>
+
+</div>
+</div>
 </div>
 

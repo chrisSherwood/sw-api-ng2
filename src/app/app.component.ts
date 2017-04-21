@@ -13,7 +13,7 @@ import 'rxjs/Rx';
 export class AppComponent implements OnInit {
 
   public sw_characters:any[];
-  public title = 'Star Wars API Maker';
+  public title = 'API-D2: Star Wars API Creator';
 
   constructor() {  }
 
