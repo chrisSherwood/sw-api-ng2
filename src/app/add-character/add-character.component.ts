@@ -18,6 +18,7 @@ export class AddCharacterComponent implements OnInit {
 
   public fileList: FileList;
   public formData:FormData;
+  public formSubmitted = false;
   public image:any;
   public allegianceList = [ 'Jedi', 
                         'Sith', 
@@ -87,7 +88,7 @@ submitSwData(characterName :string, allegiance: string, characterInformation, ch
        characterQuote:characterQuote  })
      .subscribe(data => console.log(data),
                 err  => console.error(err),
-                ()   => alert('success!'));
+                ()   => this.formSubmitted = true);
 
 }
 

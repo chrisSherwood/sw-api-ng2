@@ -1,6 +1,6 @@
 <div class="container">
     <nav class="navbar navbar-light bg-faded">
-<span class="navbar-text">Logged in as: {{username}}</span> 
+<span class="navbar-text">Successfully Authenticated via Google</span> 
  <span class="navbar-text">    <button type="button" class="btn btn-primary btn-med" (click)="logout()">Logout</button></span>
 </nav>
     <hr>
@@ -37,9 +37,12 @@
 <hr>
 <button (click)="submitSwData(characterName.value, allegiance.value, characterInformation.value, characterQuote.value, firstApperance.value);" class="btn btn-default">Send</button>
 </form>
+<p class="bg-success text-white" *ngIf="formSubmitted == true">Form Submitted</p>
 </div>
 <div class="col-6">
     <h3>Preview</h3>
+    <p>Live Preview - Coming Soon</p>
+    <code></code>
 
 </div>
 </div>
